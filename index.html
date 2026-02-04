@@ -3,67 +3,142 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Anuj Solanki | IT Recruiter</title>
+  <title>Anuj Solanki | IT Recruiter Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, Helvetica, sans-serif;
       margin: 0;
-      background: #f4f6f8;
-      color: #333;
-      line-height: 1.6;
+      font-family: 'Inter', sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
     }
+
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+
     .container {
-      max-width: 900px;
+      max-width: 1100px;
       margin: auto;
-      padding: 20px;
-      background: #fff;
+      padding: 40px 20px;
     }
-    header {
-      text-align: center;
-      padding: 30px 10px;
-      border-bottom: 2px solid #eee;
+
+    /* HERO */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      margin-bottom: 80px;
     }
-    header h1 {
-      margin: 0;
-      font-size: 32px;
+
+    .hero h1 {
+      font-size: 44px;
+      margin-bottom: 10px;
     }
-    header p {
-      font-size: 18px;
-      color: #666;
+
+    .hero h3 {
+      font-weight: 400;
+      color: #94a3b8;
+      margin-bottom: 20px;
     }
+
+    .hero p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #cbd5f5;
+    }
+
+    .buttons a {
+      display: inline-block;
+      margin-right: 15px;
+      margin-top: 20px;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+    }
+
+    .btn-primary {
+      background: #38bdf8;
+      color: #020617;
+    }
+
+    .btn-outline {
+      border: 1px solid #38bdf8;
+      color: #38bdf8;
+    }
+
+    /* SECTIONS */
     section {
-      margin: 30px 0;
+      margin-bottom: 80px;
     }
-    h2 {
-      border-left: 5px solid #0077b5;
-      padding-left: 10px;
-      color: #0077b5;
+
+    section h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      border-left: 5px solid #38bdf8;
+      padding-left: 15px;
     }
+
+    /* CARDS */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #020617;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    .card h4 {
+      margin-bottom: 10px;
+      color: #38bdf8;
+    }
+
+    .card p, .card li {
+      font-size: 14px;
+      color: #cbd5f5;
+    }
+
     ul {
-      padding-left: 20px;
+      padding-left: 18px;
     }
+
+    /* SKILLS */
     .skills span {
       display: inline-block;
-      background: #e7f3ff;
-      color: #0077b5;
-      padding: 6px 10px;
-      margin: 5px;
-      border-radius: 4px;
-      font-size: 14px;
+      background: #020617;
+      border: 1px solid #1e293b;
+      padding: 8px 12px;
+      border-radius: 20px;
+      margin: 6px;
+      font-size: 13px;
     }
-    .contact a {
-      display: block;
-      color: #0077b5;
-      text-decoration: none;
-      margin: 5px 0;
-    }
+
+    /* FOOTER */
     footer {
       text-align: center;
-      padding: 20px;
-      color: #777;
+      padding: 30px;
+      border-top: 1px solid #1e293b;
+      color: #94a3b8;
       font-size: 14px;
-      border-top: 1px solid #eee;
+    }
+
+    @media(max-width: 768px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -71,73 +146,84 @@
 <body>
   <div class="container">
 
-    <header>
-      <h1>Anuj Solanki</h1>
-      <p>IT Recruiter | Talent Acquisition | US Staffing</p>
-    </header>
+    <!-- HERO -->
+    <div class="hero">
+      <div>
+        <h1>Anuj Solanki</h1>
+        <h3>IT Recruiter · Talent Acquisition · US Staffing</h3>
+        <p>
+          I specialize in full-cycle IT recruitment, partnering with hiring managers and clients
+          to deliver high-quality technical talent across Cloud, Java, Salesforce, Data, and QA domains.
+        </p>
 
-    <section>
-      <h2>About Me</h2>
-      <p>
-        I am an experienced IT Recruiter / Talent Acquisition Specialist with a strong background
-        in full-cycle recruitment for US IT staffing. I specialize in sourcing, screening,
-        and placing high-quality technical professionals across multiple domains.
-      </p>
-      <p>
-        I work closely with hiring managers and clients to understand business needs and
-        deliver candidates who are technically strong and culturally aligned.
-      </p>
-    </section>
+        <div class="buttons">
+          <a href="https://www.linkedin.com/in/yourprofile" class="btn-primary" target="_blank">LinkedIn</a>
+          <a href="mailto:your@email.com" class="btn-outline">Contact Me</a>
+        </div>
+      </div>
 
+      <div class="card">
+        <h4>Quick Snapshot</h4>
+        <ul>
+          <li>End-to-end IT recruitment</li>
+          <li>US Staffing (W2 / C2C / Contract)</li>
+          <li>Fast turnaround on niche roles</li>
+          <li>Strong candidate & client relationships</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- WHAT I DO -->
     <section>
       <h2>What I Do</h2>
-      <ul>
-        <li>End-to-end IT recruitment (W2 / C2C / Contract)</li>
-        <li>Candidate sourcing using LinkedIn, Boolean search, and job portals</li>
-        <li>Resume screening and initial interviews</li>
-        <li>Interview coordination and offer support</li>
-        <li>Client and stakeholder communication</li>
-      </ul>
+      <div class="grid">
+        <div class="card">
+          <h4>Talent Sourcing</h4>
+          <p>LinkedIn Recruiter, Boolean search, referrals, and job portals.</p>
+        </div>
+        <div class="card">
+          <h4>Screening & Interviews</h4>
+          <p>Resume screening, initial interviews, and candidate qualification.</p>
+        </div>
+        <div class="card">
+          <h4>Client Coordination</h4>
+          <p>Requirement analysis, interview scheduling, and offer support.</p>
+        </div>
+      </div>
     </section>
 
+    <!-- ROLES -->
     <section>
       <h2>Roles I Hire For</h2>
-      <ul>
-        <li>Java & Full Stack Developers</li>
-        <li>Salesforce Developers, BAs, Tech Leads</li>
-        <li>Cloud & DevOps Engineers (AWS, Azure, GCP)</li>
-        <li>Data Analysts, Data Engineers, ML Engineers</li>
-        <li>QA & Automation Engineers</li>
-        <li>Product Managers & Business Analysts</li>
-      </ul>
+      <div class="grid">
+        <div class="card"><p>Java & Full Stack Developers</p></div>
+        <div class="card"><p>Salesforce Developers & BAs</p></div>
+        <div class="card"><p>Cloud & DevOps Engineers</p></div>
+        <div class="card"><p>Data Analysts & Engineers</p></div>
+        <div class="card"><p>QA & Automation Engineers</p></div>
+        <div class="card"><p>Product & Business Analysts</p></div>
+      </div>
     </section>
 
+    <!-- SKILLS -->
     <section>
       <h2>Skills & Tools</h2>
       <div class="skills">
         <span>IT Recruitment</span>
-        <span>Talent Acquisition</span>
         <span>US Staffing</span>
-        <span>Full Cycle Recruiting</span>
+        <span>Talent Acquisition</span>
         <span>LinkedIn Recruiter</span>
         <span>Boolean Search</span>
         <span>ATS</span>
-        <span>Client Coordination</span>
+        <span>Client Management</span>
+        <span>Interview Coordination</span>
       </div>
     </section>
 
-    <section class="contact">
-      <h2>Contact & Links</h2>
-      <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn Profile</a>
-      <a href="mailto:your@email.com">Email Me</a>
-      <a href="https://github.com/yourusername" target="_blank">GitHub Portfolio</a>
-    </section>
-
     <footer>
-      © 2026 Anuj Solanki · Portfolio hosted on GitHub Pages
+      © 2026 Anuj Solanki · Built with HTML · Hosted on GitHub Pages
     </footer>
 
   </div>
 </body>
 </html>
-

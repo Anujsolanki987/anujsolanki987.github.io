@@ -1,68 +1,156 @@
+<nav class="nav">
+  <a href="index.html">Home</a>
+  <a href="jobs.html">Jobs</a>
+  <a href="contact.html">Contact</a>
+</nav>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="description" content="Anuj Solanki – IT Recruiter specializing in US Staffing, Java, Salesforce, Cloud, Data and Full Stack hiring.">
-<meta name="keywords" content="IT Recruiter, US Staffing, Java Hiring, Salesforce Recruiter, Cloud Hiring">
-<meta name="author" content="Anuj Solanki">
-
-<meta property="og:title" content="Anuj Solanki | IT Recruiter Portfolio">
-<meta property="og:description" content="US IT Recruiter specializing in tech hiring across engineering, cloud, and data roles.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://anujsolanki987.github.io/">
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anuj Solanki | IT Recruiter</title>
 
-<!-- Google Analytics (Replace G-KWB6PTF51X) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KWB6PTF51X"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-XXXXXXX');
+  gtag('config', 'G-KWB6PTF51X');
 </script>
 
-<style>
-:root {
-  --bg: #0f2027;
-  --card: rgba(255,255,255,0.08);
-  --text: #ffffff;
-  --accent: #00e0ff;
+<title>Anuj Solanki | IT Recruiter</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<div class="toggle" onclick="toggleMode()">🌙 / ☀️</div>
+
+<nav class="nav">
+  <a href="index.html">Home</a>
+  <a href="jobs.html">Jobs</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<header class="hero">
+  <img src="profile.jpg" class="profile">
+  <h1>Anuj Solanki</h1>
+  <p>IT Recruiter | US Staffing | Tech Hiring</p>
+</header>
+
+<section class="card">
+  <h2>About Me</h2>
+  <p>
+    IT Recruiter specializing in US staffing with strong experience
+    hiring across Java, Salesforce, Cloud, Data, and Product roles.
+  </p>
+</section>
+
+<a class="whatsapp" href="https://wa.me/17324792302" target="_blank">💬</a>
+
+<script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Jobs | Anuj Solanki</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html">Home</a>
+  <a href="jobs.html">Jobs</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<section class="card">
+  <h2>Live Job Openings</h2>
+  <ul id="jobs"></ul>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Contact | Anuj Solanki</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html">Home</a>
+  <a href="jobs.html">Jobs</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<section class="card">
+  <h2>Contact Me</h2>
+  <p>📞 US: +1 732 479-2302</p>
+  <p>📞 India: +91 9310242511</p>
+  <p>
+    🔗 <a href="https://www.linkedin.com/in/anuj-solanki-a276a0253/" target="_blank">
+    LinkedIn Profile</a>
+  </p>
+</section>
+
+<section class="card">
+  <h2>Book a Meeting</h2>
+  <iframe src="https://calendly.com/anuj-solanki"
+    width="100%" height="600" frameborder="0"></iframe>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
+body {
+  background: #0f2027;
+  color: #fff;
+  font-family: Segoe UI, sans-serif;
+  margin: 0;
 }
 
 .light {
-  --bg: #f5f7fa;
-  --card: #ffffff;
-  --text: #222;
-  --accent: #0066ff;
+  background: #f5f7fa;
+  color: #222;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
 }
 
-body {
-  background: linear-gradient(120deg, var(--bg), #203a43);
-  color: var(--text);
-  transition: all 0.4s ease;
+.nav a {
+  color: #00e0ff;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-header {
+.hero {
   text-align: center;
-  padding: 90px 20px;
+  padding: 60px 20px;
 }
 
-header h1 {
-  font-size: 3rem;
+.profile {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
 }
 
-header p {
-  opacity: 0.85;
-  margin-top: 10px;
+.card {
+  max-width: 900px;
+  margin: 30px auto;
+  background: rgba(255,255,255,0.08);
+  padding: 30px;
+  border-radius: 16px;
 }
 
 .toggle {
@@ -70,58 +158,6 @@ header p {
   top: 20px;
   right: 20px;
   cursor: pointer;
-  background: var(--card);
-  padding: 10px 14px;
-  border-radius: 30px;
-}
-
-section {
-  max-width: 1000px;
-  margin: auto;
-  padding: 40px 20px;
-}
-
-.card {
-  background: var(--card);
-  border-radius: 16px;
-  padding: 30px;
-  margin-bottom: 30px;
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.7s ease;
-}
-
-.card.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.card:hover {
-  transform: scale(1.04);
-}
-
-h2 {
-  color: var(--accent);
-  margin-bottom: 15px;
-}
-
-a {
-  color: var(--accent);
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 12px 22px;
-  background: var(--accent);
-  color: #000;
-  border-radius: 30px;
-}
-
-.jobs li {
-  margin-bottom: 10px;
 }
 
 .whatsapp {
@@ -129,95 +165,27 @@ a {
   bottom: 25px;
   right: 25px;
   background: #25d366;
-  color: white;
-  padding: 15px 18px;
+  color: #fff;
+  padding: 15px;
   border-radius: 50%;
-  font-size: 22px;
 }
-
-footer {
-  text-align: center;
-  padding: 30px;
-  opacity: 0.7;
-}
-</style>
-</head>
-
-<body>
-
-<div class="toggle" onclick="toggleMode()">🌙 / ☀️</div>
-
-<header>
-  <h1>Anuj Solanki</h1>
-  <p>IT Recruiter | US Staffing | Tech Hiring Specialist</p>
-  <a class="btn" href="resume.pdf" download>📄 Download Resume</a>
-</header>
-
-<section>
-
-  <div class="card">
-    <h2>About Me</h2>
-    <p>
-      IT Recruiter with strong experience in US staffing, partnering with
-      clients to hire top-tier technology talent across engineering,
-      cloud, data, and product roles.
-    </p>
-  </div>
-
-  <div class="card">
-    <h2>What I Hire For</h2>
-    <ul>
-      <li>✔ Java / Full Stack Developers</li>
-      <li>✔ Salesforce Consultants & Architects</li>
-      <li>✔ Cloud & DevOps Engineers</li>
-      <li>✔ Data Engineers & Analysts</li>
-      <li>✔ Product Managers & BAs</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h2>Open Job Postings</h2>
-    <ul class="jobs">
-      <li>📌 Senior Java Developer – USA (Hybrid)</li>
-      <li>📌 Salesforce Tech Lead – Alpharetta, GA</li>
-      <li>📌 Cloud Solutions Architect – AWS</li>
-      <li>📌 Data Analyst – Remote</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h2>Contact</h2>
-    <p>📞 US: +1 732 479-2302</p>
-    <p>📞 India: +91 9310242511</p>
-    <p>
-      🔗 <a href="https://www.linkedin.com/in/anuj-solanki-a276a0253/" target="_blank">
-      LinkedIn Profile</a>
-    </p>
-  </div>
-
-</section>
-
-<a class="whatsapp" href="https://wa.me/17324792302" target="_blank">💬</a>
-
-<footer>
-© 2026 Anuj Solanki | GitHub Pages
-</footer>
-
-<script>
 function toggleMode() {
   document.body.classList.toggle("light");
 }
 
-const cards = document.querySelectorAll(".card");
-window.addEventListener("scroll", () => {
-  cards.forEach(card => {
-    const pos = card.getBoundingClientRect().top;
-    if (pos < window.innerHeight - 100) {
-      card.classList.add("show");
-    }
+// Google Sheet Jobs
+fetch("PASTE_YOUR_GOOGLE_SHEET_CSV_URL")
+  .then(res => res.text())
+  .then(data => {
+    const rows = data.split("\n").slice(1);
+    let html = "";
+    rows.forEach(r => {
+      const c = r.split(",");
+      if (c.length > 2) {
+        html += `<li>📌 <b>${c[0]}</b> – ${c[1]}
+        <a href="${c[3]}" target="_blank">Apply</a></li>`;
+      }
+    });
+    const el = document.getElementById("jobs");
+    if (el) el.innerHTML = html;
   });
-});
-</script>
-
-</body>
-</html>

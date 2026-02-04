@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Anuj Solanki | IT Recruiter Portfolio</title>
 
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -15,7 +16,7 @@
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background: #0f172a;
+      background: linear-gradient(135deg, #020617, #0f172a);
       color: #e5e7eb;
     }
 
@@ -25,22 +26,43 @@
     }
 
     .container {
-      max-width: 1100px;
+      max-width: 1150px;
       margin: auto;
       padding: 40px 20px;
+    }
+
+    /* ANIMATIONS */
+    .fade-up {
+      animation: fadeUp 1s ease forwards;
+      opacity: 0;
+    }
+
+    .zoom-in {
+      animation: zoomIn 1s ease forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
     }
 
     /* HERO */
     .hero {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1.2fr 0.8fr;
       gap: 40px;
       align-items: center;
-      margin-bottom: 80px;
+      margin-bottom: 90px;
     }
 
     .hero h1 {
-      font-size: 44px;
+      font-size: 46px;
       margin-bottom: 10px;
     }
 
@@ -60,9 +82,10 @@
       display: inline-block;
       margin-right: 15px;
       margin-top: 20px;
-      padding: 12px 20px;
-      border-radius: 8px;
+      padding: 12px 22px;
+      border-radius: 10px;
       font-weight: 600;
+      transition: all 0.3s ease;
     }
 
     .btn-primary {
@@ -70,63 +93,66 @@
       color: #020617;
     }
 
+    .btn-primary:hover {
+      transform: scale(1.05);
+    }
+
     .btn-outline {
       border: 1px solid #38bdf8;
       color: #38bdf8;
     }
 
-    /* SECTIONS */
+    .btn-outline:hover {
+      background: #38bdf8;
+      color: #020617;
+    }
+
+    /* CARDS */
+    .card {
+      background: #020617;
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
     section {
-      margin-bottom: 80px;
+      margin-bottom: 90px;
     }
 
     section h2 {
       font-size: 28px;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
       border-left: 5px solid #38bdf8;
       padding-left: 15px;
     }
 
-    /* CARDS */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
+      gap: 24px;
     }
 
-    .card {
-      background: #020617;
-      border-radius: 12px;
-      padding: 25px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    }
-
-    .card h4 {
-      margin-bottom: 10px;
-      color: #38bdf8;
-    }
-
-    .card p, .card li {
-      font-size: 14px;
-      color: #cbd5f5;
-    }
-
-    ul {
-      padding-left: 18px;
-    }
-
-    /* SKILLS */
     .skills span {
       display: inline-block;
       background: #020617;
       border: 1px solid #1e293b;
-      padding: 8px 12px;
-      border-radius: 20px;
+      padding: 10px 16px;
+      border-radius: 25px;
       margin: 6px;
       font-size: 13px;
+      transition: all 0.3s ease;
     }
 
-    /* FOOTER */
+    .skills span:hover {
+      background: #38bdf8;
+      color: #020617;
+    }
+
     footer {
       text-align: center;
       padding: 30px;
@@ -148,33 +174,38 @@
 
     <!-- HERO -->
     <div class="hero">
-      <div>
+      <div class="fade-up">
         <h1>Anuj Solanki</h1>
         <h3>IT Recruiter · Talent Acquisition · US Staffing</h3>
         <p>
-          I specialize in full-cycle IT recruitment, partnering with hiring managers and clients
-          to deliver high-quality technical talent across Cloud, Java, Salesforce, Data, and QA domains.
+          IT Recruiter and Talent Acquisition professional specializing in full-cycle recruitment
+          for US IT staffing. I partner with hiring managers and clients to deliver top technical
+          talent across Cloud, Java, Salesforce, Data, and QA domains.
         </p>
 
         <div class="buttons">
-          <a href="https://www.linkedin.com/in/yourprofile" class="btn-primary" target="_blank">LinkedIn</a>
-          <a href="mailto:your@email.com" class="btn-outline">Contact Me</a>
+          <a href="https://www.linkedin.com/in/anuj-solanki-a276a0253/" target="_blank" class="btn-primary">
+            View LinkedIn
+          </a>
+          <a href="#contact" class="btn-outline">
+            Contact Me
+          </a>
         </div>
       </div>
 
-      <div class="card">
+      <div class="card zoom-in">
         <h4>Quick Snapshot</h4>
         <ul>
-          <li>End-to-end IT recruitment</li>
+          <li>End-to-end IT Recruitment</li>
           <li>US Staffing (W2 / C2C / Contract)</li>
-          <li>Fast turnaround on niche roles</li>
+          <li>Niche & senior technical roles</li>
           <li>Strong candidate & client relationships</li>
         </ul>
       </div>
     </div>
 
     <!-- WHAT I DO -->
-    <section>
+    <section class="fade-up">
       <h2>What I Do</h2>
       <div class="grid">
         <div class="card">
@@ -193,25 +224,25 @@
     </section>
 
     <!-- ROLES -->
-    <section>
+    <section class="fade-up">
       <h2>Roles I Hire For</h2>
       <div class="grid">
-        <div class="card"><p>Java & Full Stack Developers</p></div>
-        <div class="card"><p>Salesforce Developers & BAs</p></div>
-        <div class="card"><p>Cloud & DevOps Engineers</p></div>
-        <div class="card"><p>Data Analysts & Engineers</p></div>
-        <div class="card"><p>QA & Automation Engineers</p></div>
-        <div class="card"><p>Product & Business Analysts</p></div>
+        <div class="card">Java & Full Stack Developers</div>
+        <div class="card">Salesforce Developers & BAs</div>
+        <div class="card">Cloud & DevOps Engineers</div>
+        <div class="card">Data Analysts & Engineers</div>
+        <div class="card">QA & Automation Engineers</div>
+        <div class="card">Product & Business Analysts</div>
       </div>
     </section>
 
     <!-- SKILLS -->
-    <section>
+    <section class="fade-up">
       <h2>Skills & Tools</h2>
       <div class="skills">
         <span>IT Recruitment</span>
-        <span>US Staffing</span>
         <span>Talent Acquisition</span>
+        <span>US Staffing</span>
         <span>LinkedIn Recruiter</span>
         <span>Boolean Search</span>
         <span>ATS</span>
@@ -220,8 +251,18 @@
       </div>
     </section>
 
+    <!-- CONTACT -->
+    <section id="contact" class="fade-up">
+      <h2>Contact</h2>
+      <div class="card">
+        <p>📞 US: +1 732 479 2302</p>
+        <p>📞 India: +91 9310242511</p>
+        <p>🔗 <a href="https://www.linkedin.com/in/anuj-solanki-a276a0253/" target="_blank">LinkedIn Profile</a></p>
+      </div>
+    </section>
+
     <footer>
-      © 2026 Anuj Solanki · Built with HTML · Hosted on GitHub Pages
+      © 2026 Anuj Solanki · Portfolio hosted on GitHub Pages
     </footer>
 
   </div>
